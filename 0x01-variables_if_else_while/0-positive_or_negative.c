@@ -4,7 +4,7 @@
 /**
  * main - prinf if number is positive, zero or negative
  *
- * return: 0
+ * Return: Always (Success)
  *
  */
 int main(void)
