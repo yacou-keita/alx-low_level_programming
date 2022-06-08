@@ -1,19 +1,28 @@
-#include "main.h"
-/**
- * main - Prints _putchar as a message.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
-	int count, sz;
+#include <stdio.h>
 
-	sz = sizeof(str) / sizeof(int);
-	for (count = 0; count < sz; count++)
+/**
+ * print_to_98 - Prints all natural numbers
+ * from n to 98.
+ *
+ * @n: input number.
+ *
+ * Return: no return.
+ */
+void print_to_98(int n)
+{
+	if (n > 98)
 	{
-		_putchar(str[count]);
+		for (; n > 98; n--)
+		{
+			printf("%d, ", n);
+		}
 	}
-	_putchar('\n');
-	return (0);
+	else if (n < 98)
+	{
+		for (; n < 98; n++)
+		{
+			printf("%d, ", n);
+		}
+	}
+	printf("%d\n", n);
 }
