@@ -1,19 +1,32 @@
 #include "main.h"
-/**
- * main - Prints _putchar as a message.
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
-	int count, sz;
 
-	sz = sizeof(str) / sizeof(int);
-	for (count = 0; count < sz; count++)
+/**
+ * jack_bauer - Prints the minutes of a day
+ *
+ * Return: no return
+ */
+void jack_bauer(void)
+{
+	int a, b, c, d;
+
+	for (a = 48; a <= 50; a++)
 	{
-		_putchar(str[count]);
+		for (b = 48; b <= 57; b++)
+		{
+			for (c = 48; c <= 53; c++)
+			{
+				for (d = 48; d <= 57; d++)
+				{
+					if (a >= 50 && b >= 52)
+						break;
+					_putchar(a);
+					_putchar(b);
+					_putchar(58);
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
+				}
+			}
+		}
 	}
-	_putchar('\n');
-	return (0);
 }
