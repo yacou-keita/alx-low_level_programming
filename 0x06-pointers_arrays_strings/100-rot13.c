@@ -1,37 +1,28 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Prints numbers between 00 to 89.
- *
- * Return: Always 0 (Success)
+ * rot13 - encodes a string using rot13
+ * @s: input string.
+ * Return: the pointer to dest.
  */
-int main(void)
+
+char *rot13(char *s)
 {
-	int i, e;
+	int count = 0, i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	i = 48;
-	e = 48;
-
-	while (e < 58)
+	while (*(s + count) != '\0')
 	{
-		i = 48;
-		while (i < 58)
+		for (i = 0; i < 52; i++)
 		{
-			if (e != i && e < i)
+			if (*(s + count) == alphabet[i])
 			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
+				*(s + count) = rot13[i];
+				break;
 			}
-			i++;
 		}
-		e++;
+		count++;
 	}
-	putchar('\n');
-	return (0);
+
+	return (s);
 }
